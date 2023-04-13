@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './App.css';
 
 // Provider Pattern - CounterProvider
 const CounterContext = React.createContext();
@@ -32,8 +32,10 @@ const CounterContainer = () => {
 const App = () => {
   return (
     <CounterProvider>
+      <div className='container'>
       <CounterDisplay />
       <CounterContainer />
+      </div>
     </CounterProvider>
   );
 };
